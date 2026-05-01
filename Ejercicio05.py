@@ -1,0 +1,16 @@
+saldo = float(input("Depósito inicial: S/"))
+meta = float(input("Meta a alcanzar: S/"))
+
+tasa = 0.015
+meses = 0
+
+print(f"Mes 0: S/{saldo:.2f}")
+
+# La condición es la misma: seguir mientras el saldo sea insuficiente
+while saldo < meta:
+    saldo = saldo * (1 + tasa)
+    meses = meses + 1
+    
+    print(f"Mes {meses}: S/{saldo:.2f}")
+
+print(f"Alcanzará la meta en {meses} meses.")
